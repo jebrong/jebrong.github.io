@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --base: #9bbafa;
+  --main: #437ef6;
+  --accent-1: #f64f42;
+  --accent-2: #c5f642;
+  --text-1: #e4ecfd;
+  --text-2: #202124;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-2);
+
+  margin: 0;
+  width: 100vw;
+  background-color: var(--base);
+  overflow-y: overlay;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__nav {
+  width: 100%;
+  background-color: var(--accent-1);
+  padding: 10px 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.container__logo {
+  display: inline-block;
+  margin-right: auto;
+}
+.container__nav img {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  /* filter: grayscale(100%); */
+  border-radius: 2px;
+  border: var(--main) 6px solid;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.container__text {
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--text-1);
+  font-weight: 700;
+  justify-content: center;
+  margin-left: 50px;
+  padding: 0;
+  letter-spacing: 10px;
+}
+.container__text.active {
+  color: var(--accent-2);
+}
+
+.container__product {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__product__search {
+  background-color: var(--text-1);
+  padding: 10%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  text-align: center;
+
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.container__product__search label {
+  font-size: 2rem;
+  margin-bottom: 5%;
+  letter-spacing: 2px;
+}
+.container__product__search input {
+  height: 3rem;
+  font-weight: 400;
+  background-color: #c5f642;
+  border: none;
+  padding: 2px 20px;
+}
+.container__product__search input:focus {
+  outline: none;
+}
+
+.container__product_list {
+  width: 100vw;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.product_item {
+  padding: 40px 0;
+  width: 400px;
+  height: 520px;
+  background-color: var(--text-1);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.product_item img {
+  height: 250px;
+  width: 250px;
+  margin: 20px;
+}
+.product_item h1 {
+  margin: 0px;
+}
+
+.product_item h4 {
+  margin: 2px;
+}
+.product_item p {
+  margin: 15px;
+}
+
+.product_item a,
+.single__btn_home {
+  align-self: center;
+  text-align: center;
+  background-color: var(--accent-2);
+  color: var(--text-2);
+  width: 50%;
+  border-radius: 8px;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  cursor: pointer;
+  font-size: 100%;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  padding: 10px 10px;
+  margin: 25px;
+}
+.single__btn_home:hover,
+.product_item a:hover {
+  filter: brightness(1.2);
+}
+
+.single__container {
+  background-color: var(--text-1);
+
+  margin: 20px 0 0 0;
+  padding: 3%;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+.single__container img {
+  margin-top: 30px;
+  align-self: center;
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.single__btn_home {
+  top: -8px;
+  margin-top: 20px;
+  position: absolute;
+}
